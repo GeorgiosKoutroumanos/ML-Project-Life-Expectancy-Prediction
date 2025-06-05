@@ -5,30 +5,48 @@
 ## Introduction
 This Jupyter Notebook analyzes a dataset on life expectancy across countries and applies various machine learning models to predict life expectancy based on multiple socio-economic and health-related factors.
 
-The goal is to build a robust regression model that accurately predicts life expectancy based on input features, and to explore which factors contribute the most to variations in life expectancy globally.
+The goal is to build a robust regression model that accurately predicts life expectancy based on input features, and to explore which factors contribute the most to variations in life expectancy.
 
 ## Data
 
-The dataset includes information on the following columns:
+The dataset includes the following columns:
 
 - Country
 - Year
-- Status: Developed or Developing
-- Life expectancy: In years
-- Adult Mortality: Probability of dying between 15 and 60 years per 1000 population
-- Infant deaths
-- Alcohol: Recorded per capita (15+) alcohol consumption (liters of pure alcohol)
-- Percentage expenditure: Health expenditure as a % of GDP per capita
-- Hepatitis B: Immunization coverage among 1-year-olds (%)
-- Measles: Reported cases per 1000 population
-- BMI: Average Body Mass Index of the population
+- Status: Developed or Developing status
+- Life expectancy: Life Expectancy in age
+- Adult Mortality: Adult Mortality Rates of both sexes (probability of dying between 15 and 60 years per 1000 population)
+- infant deaths: Number of Infant Deaths per 1000 population
+- Alcohol: Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)
+- percentage expenditure: Expenditure on health as a percentage of Gross Domestic Product per capita(%)
+- Hepatitis B: Hepatitis B (HepB) immunization coverage among 1-year-olds (%)
+- Measles: Measles - number of reported cases per 1000 population
+- BMI: Average Body Mass Index of entire population
 
 Data source: Life Expectancy Data.csv (https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who/data?select=Life+Expectancy+Data.csv)
 
 **Libraries Used**:
-- pandas, numpy – Data manipulation
-- matplotlib, seaborn – Visualization
-- scikit-learn – Model training and evaluation
+
+📦 Data Manipulation & Analysis
+- pandas – DataFrames and data operations
+- numpy – Numerical computations
+
+📊 Data Visualization
+- matplotlib.pyplot – Plotting and graphs
+- seaborn – Statistical data visualization
+
+🧹 Preprocessing
+- re – Regular expressions for string/text cleaning
+- StandardScaler, RobustScaler from sklearn.preprocessing – Feature scaling
+
+📈 Model Selection & Evaluation
+- train_test_split, cross_val_score, learning_curve, GridSearchCV from sklearn.model_selection
+- mean_squared_error, mean_absolute_error, r2_score, root_mean_squared_error from sklearn.metrics
+
+🤖 Machine Learning Models
+- LinearRegression from sklearn.linear_model
+- DecisionTreeRegressor from sklearn.tree
+- RandomForestRegressor, BaggingRegressor, AdaBoostRegressor, GradientBoostingRegressor from sklearn.ensemble
 
 **Models Implemented**
 - Linear Regression
