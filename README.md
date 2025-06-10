@@ -80,3 +80,5 @@ Run each cell in the notebook sequentially to:
 1) Load and preprocess the data
 2) Train multiple models
 3) Evaluate and compare their performance
+
+Link presentation: [ML Project: Predicting Life Expectancy](https://docs.google.com/presentation/d/1ViwYq_ZBXS0s9ffLUeekbbUygQ6qhLecUKuYicefk48/edit?usp=sharing)
